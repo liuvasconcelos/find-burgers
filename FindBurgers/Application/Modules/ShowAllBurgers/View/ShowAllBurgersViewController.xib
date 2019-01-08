@@ -33,7 +33,7 @@
                 <viewLayoutGuide key="safeArea" id="S71-dn-mlw"/>
             </view>
             <connections>
-                <outlet property="mapView" destination="bvY-b3-tKB" id="oYm-Xz-ikJ"/>
+                <outlet property="map" destination="bvY-b3-tKB" id="BbP-AA-9cT"/>
             </connections>
             <point key="canvasLocation" x="596" y="-111.0944527736132"/>
         </viewController>

@@ -27,6 +27,7 @@
 		538EA0ED21E2BE3F001237B1 /* BurgerDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EC21E2BE3F001237B1 /* BurgerDetailsContract.swift */; };
 		538EA0EF21E2C042001237B1 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EE21E2C042001237B1 /* GetImage.swift */; };
 		538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F221E38F56001237B1 /* ViewUtils.swift */; };
+		538EA0F621E424D3001237B1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F521E424D3001237B1 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		538EA0EC21E2BE3F001237B1 /* BurgerDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerDetailsContract.swift; sourceTree = "<group>"; };
 		538EA0EE21E2C042001237B1 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
 		538EA0F221E38F56001237B1 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		538EA0F521E424D3001237B1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		538EA0F021E38F38001237B1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				538EA0F421E424BD001237B1 /* Extensions */,
 				538EA0F121E38F49001237B1 /* Utils */,
 				538EA0DF21E2BC5F001237B1 /* UseCases */,
 			);
@@ -258,6 +261,14 @@
 				538EA0F221E38F56001237B1 /* ViewUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		538EA0F421E424BD001237B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				538EA0F521E424D3001237B1 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 				538EA0D821E2BBE3001237B1 /* BurgerDetailsPresenter.swift in Sources */,
 				538EA0E321E2BCB6001237B1 /* FoursquareApiDataSource.swift in Sources */,
 				538EA0D321E2B9A1001237B1 /* ShowAllBurgersPresenter.swift in Sources */,
+				538EA0F621E424D3001237B1 /* UIImageExtension.swift in Sources */,
 				538EA0EF21E2C042001237B1 /* GetImage.swift in Sources */,
 				538EA0DA21E2BC00001237B1 /* BurgerDetailsViewController.swift in Sources */,
 				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,

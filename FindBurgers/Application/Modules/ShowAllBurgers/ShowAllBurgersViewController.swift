@@ -10,11 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract, CLLocationManagerDelegate, MKMapViewDelegate {
+class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract, CLLocationManagerDelegate {
     
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var map: MKMapView!
     
     var locationManager : CLLocationManager!
     
@@ -27,9 +27,8 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         locationManager.distanceFilter  = 200
         locationManager.requestWhenInUseAuthorization()
         
-        let coordinate = CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.4167)
-        let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
-        mapView.addOverlay(circleOverlay)
+        map.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,56 +43,65 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            let span   = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            let region = MKCoordinateRegion(center: location.coordinate, span: span)
-            mapView.setRegion(region, animated: false)
-            addAnnotationAtCoordinate(coordinate: location.coordinate)
+            let span       = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            let coordinate = CLLocationCoordinate2D(latitude:  -9.66629, longitude: -35.7351)
+            let region     = MKCoordinateRegion(center: location.coordinate, span: span)
+            map.setRegion(region, animated: false)
+            
+            addAnnotationAtCoordinate(coordinate: coordinate, title: "Teste")
+            addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D(latitude: -9.648587, longitude:  -35.712260), title: "Tiago")
+
+            let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
+            map.addOverlay(circleOverlay)
         }
     }
     
-    func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D) {
+    func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D, title: String) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
-        annotation.title = "An annotation!"
-        mapView.addAnnotation(annotation)
+        annotation.title = title
+        map.addAnnotation(annotation)
     }
     
-//    func addAnnotationAtAddress(address: String, title: String) {
-//        let geocoder = CLGeocoder()
-//        geocoder.geocodeAddressString(address) { (placemarks, error) in
-//            if let placemarks = placemarks {
-//                if placemarks.count != 0 {
-//                    let coordinate = placemarks.first!.location!
-//                    let annotation = MKPointAnnotation()
-//                    annotation.coordinate = coordinate.coordinate
-//                    annotation.title = title
-//                    self.mapView.addAnnotation(annotation)
-//                }
-//            }
-//        }
-//    }
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "customAnnotationView"
+}
+
+extension ShowAllBurgersViewController: MKMapViewDelegate {
+    func mapView (_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
         
-        // custom image annotation
-        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        if (annotationView == nil) {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        let annotationIdentifier = "AnnotationIdentifier"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView!.canShowCallout = true
         }
         else {
             annotationView!.annotation = annotation
         }
-        annotationView!.image = UIImage(named: "liu")
+        
+        if annotation.title == "Tiago"{
+            let pinImage = UIImage(named: "tiago")?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
+            annotationView!.image = pinImage
+        } else {
+            let pinImage = UIImage(named: "test1")?.resizeImage(CGSize(width: 20, height: 20))
+            annotationView!.image = pinImage
+        }
+        
         
         return annotationView
     }
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleView = MKCircleRenderer(overlay: overlay)
         circleView.strokeColor = UIColor.red
         circleView.lineWidth = 1
         return circleView
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation?.title!! as Any)
+    }
 }
