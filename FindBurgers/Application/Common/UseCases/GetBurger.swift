@@ -14,4 +14,9 @@ class GetBurger {
     init(apiDataSource: FoursquareApiDataSource) {
         self.apiDataSource = apiDataSource
     }
+    
+    func findBurgersNear(latitude: Double, longitude: Double, _ loadCallback: @escaping (BaseCallback<[VenueResponse]>) -> Void) {
+        apiDataSource.findBurgersNear(latitude: latitude, longitude: longitude, loadCallback)
+    }
+    
 }

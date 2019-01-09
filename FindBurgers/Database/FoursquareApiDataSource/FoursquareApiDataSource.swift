@@ -9,6 +9,5 @@
 import Foundation
 
 protocol FoursquareApiDataSource {
-   
+    func findBurgersNear(latitude: Double, longitude: Double, _ loadCallback: @escaping (BaseCallback<[VenueResponse]>) -> Void)
 }
-

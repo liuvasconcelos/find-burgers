@@ -17,10 +17,15 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     @IBOutlet weak var map: MKMapView!
     
     var locationManager : CLLocationManager!
+    var nearBurgers: [VenueResponse] = []
+    
+    lazy var presenter: ShowAllBurgersPresenterContract = {
+        return ShowAllBurgersPresenter(view: self,
+                                       getBurger: InjectionUseCase.provideGetBurger())
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager                 = CLLocationManager()
         locationManager.delegate        = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -44,13 +49,13 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             let span       = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            let coordinate = CLLocationCoordinate2D(latitude:  -9.66629, longitude: -35.7351)
             let region     = MKCoordinateRegion(center: location.coordinate, span: span)
             map.setRegion(region, animated: false)
             
-            addAnnotationAtCoordinate(coordinate: coordinate, title: "Teste")
-            addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D(latitude: -9.648587, longitude:  -35.712260), title: "Tiago")
-
+            presenter.findBurgersNear(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            
+            //CHANGE TO ESTONIA METRO COORDINATES
+            let coordinate = CLLocationCoordinate2D(latitude:  -9.66629, longitude: -35.7351)
             let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
             map.addOverlay(circleOverlay)
         }
@@ -62,6 +67,16 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         annotation.title = title
         map.addAnnotation(annotation)
     }
+    
+    func showNear(burgers: [VenueResponse]) {
+        self.nearBurgers = burgers
+        
+        for burger in nearBurgers {
+            let coordinate = CLLocationCoordinate2D(latitude:  burger.latitude ?? 0, longitude: burger.longitude ?? 0)
+            addAnnotationAtCoordinate(coordinate: coordinate, title: burger.name ?? "")
+        }
+    }
+    
     
 }
 
@@ -82,14 +97,8 @@ extension ShowAllBurgersViewController: MKMapViewDelegate {
             annotationView!.annotation = annotation
         }
         
-        if annotation.title == "Tiago"{
-            let pinImage = UIImage(named: "tiago")?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
-            annotationView!.image = pinImage
-        } else {
-            let pinImage = UIImage(named: "test1")?.resizeImage(CGSize(width: 20, height: 20))
-            annotationView!.image = pinImage
-        }
-        
+        let pinImage = UIImage(named: "tiago")?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
+        annotationView!.image = pinImage
         
         return annotationView
     }
