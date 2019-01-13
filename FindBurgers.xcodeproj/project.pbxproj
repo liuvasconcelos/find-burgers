@@ -13,6 +13,9 @@
 		53072AA321E573D200A3E214 /* BaseVenueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA221E573D200A3E214 /* BaseVenueResponse.swift */; };
 		53072AA621E577FB00A3E214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA521E577FB00A3E214 /* InjectionUseCase.swift */; };
 		53072AA821E5784E00A3E214 /* InjectionApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */; };
+		53072AAC21E6827900A3E214 /* BasePhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */; };
+		53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAE21E6829D00A3E214 /* PhotoResponse.swift */; };
+		53072AB221E6875800A3E214 /* VenueDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB121E6875800A3E214 /* VenueDto.swift */; };
 		538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA09C21E2B790001237B1 /* AppDelegate.swift */; };
 		538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A321E2B791001237B1 /* Assets.xcassets */; };
 		538EA0A721E2B791001237B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */; };
@@ -65,6 +68,9 @@
 		53072AA221E573D200A3E214 /* BaseVenueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVenueResponse.swift; sourceTree = "<group>"; };
 		53072AA521E577FB00A3E214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
 		53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionApiDataSource.swift; sourceTree = "<group>"; };
+		53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhotoResponse.swift; sourceTree = "<group>"; };
+		53072AAE21E6829D00A3E214 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		53072AB121E6875800A3E214 /* VenueDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDto.swift; sourceTree = "<group>"; };
 		538EA09921E2B790001237B1 /* FindBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EA09C21E2B790001237B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		538EA0A321E2B791001237B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,8 +147,8 @@
 		53072A9F21E565F100A3E214 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				53072AA021E5660000A3E214 /* VenueResponse.swift */,
-				53072AA221E573D200A3E214 /* BaseVenueResponse.swift */,
+				53072AAA21E6825C00A3E214 /* Photos */,
+				53072AA921E6824F00A3E214 /* Venues */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -154,6 +160,32 @@
 				53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */,
 			);
 			path = Injections;
+			sourceTree = "<group>";
+		};
+		53072AA921E6824F00A3E214 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				53072AA021E5660000A3E214 /* VenueResponse.swift */,
+				53072AA221E573D200A3E214 /* BaseVenueResponse.swift */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		53072AAA21E6825C00A3E214 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */,
+				53072AAE21E6829D00A3E214 /* PhotoResponse.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		53072AB021E6874100A3E214 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				53072AB121E6875800A3E214 /* VenueDto.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		538EA09021E2B78F001237B1 = {
@@ -232,6 +264,7 @@
 		538EA0CC21E2B8C0001237B1 /* ShowAllBurgers */ = {
 			isa = PBXGroup;
 			children = (
+				53072AB021E6874100A3E214 /* Dto */,
 				538EA0D421E2B9A7001237B1 /* View */,
 				538EA0D021E2B995001237B1 /* ShowAllBurgersViewController.swift */,
 				538EA0D221E2B9A1001237B1 /* ShowAllBurgersPresenter.swift */,
@@ -586,6 +619,9 @@
 				538EA0DA21E2BC00001237B1 /* BurgerDetailsViewController.swift in Sources */,
 				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,
 				538EA0D121E2B995001237B1 /* ShowAllBurgersViewController.swift in Sources */,
+				53072AB221E6875800A3E214 /* VenueDto.swift in Sources */,
+				53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */,
+				53072AAC21E6827900A3E214 /* BasePhotoResponse.swift in Sources */,
 				53072AA621E577FB00A3E214 /* InjectionUseCase.swift in Sources */,
 				538EA0EB21E2BD7C001237B1 /*  ShowAllBurgersContract.swift in Sources */,
 				538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */,

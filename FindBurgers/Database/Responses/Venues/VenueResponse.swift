@@ -15,8 +15,6 @@ public class VenueResponse: Mappable {
     var latitude: Double?
     var longitude: Double?
     var distance: Double?
-    var imageURL: String?
-    var imageSuffix: String?
     
     convenience required public init?(map: Map) {
         self.init()
@@ -28,8 +26,6 @@ public class VenueResponse: Mappable {
         latitude    <- map[APIFields.latitude]
         longitude   <- map[APIFields.longitude]
         distance    <- map[APIFields.distance]
-        imageURL    <- map[APIFields.imageURL]
-        imageSuffix <- map[APIFields.imageSuffix]
         
     }
     
@@ -39,8 +35,6 @@ public class VenueResponse: Mappable {
         static let latitude    = "location.lat"
         static let longitude   = "location.lng"
         static let distance    = "location.distance"
-        static let imageURL    = "categories.0.icon.prefix"
-        static let imageSuffix = "categories.0.icon.suffix"
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
+    
     private let view:      ShowAllBurgersViewContract
     private let getBurger: GetBurger
     
@@ -18,12 +19,53 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
     func findBurgersNear(latitude: Double, longitude: Double) {
         getBurger.findBurgersNear(latitude: latitude, longitude: longitude) { (callback) in
             callback.onSuccess({ (burgers) in
-                self.view.showNear(burgers: burgers)
+                self.searchForPhotosOfAVenueBy(burgers)
             })
             callback.onFailed({ (error) in
                 print("falha")
             })
         }
+    }
+    
+    func searchForPhotosOfAVenueBy(_ venues: [VenueResponse]) {
+//        for venue in venues {
+//            getBurger.searchForPhotosOfAVenueBy(id: venue.id!) { (callback) in
+//                callback.onSuccess({ (photos) in
+//                    self.view.showNear(venue: self.convertResponseToVenuePhotoDto(response: photos, venue: venue))
+//                })
+//
+//                callback.onFailed({ (error) in
+//                    print("falha")
+//                })
+//            }
+//        }
+        
+        for venue in venues {
+            if venue.id == "4dd82fb9e4cd37c893bf78c9" {
+                getBurger.searchForPhotosOfAVenueBy(id: "4dd82fb9e4cd37c893bf78c9") { (callback) in
+                    callback.onSuccess({ (photos) in
+                        self.view.showNear(venue: self.convertResponseToVenuePhotoDto(response: photos, venue: venue))
+                    })
+                    
+                    callback.onFailed({ (error) in
+                        print("falha")
+                    })
+                }
+            }
+        }
+        
+    }
+    
+    fileprivate func convertResponseToVenuePhotoDto(response: [PhotoResponse], venue: VenueResponse) -> VenueDto {
+        var photoUrl = ""
+        if let firstPhoto = response.first {
+            photoUrl = "\(firstPhoto.prefix!)\(firstPhoto.width!)x\(firstPhoto.height!)\(firstPhoto.suffix!)"
+        }
+        return VenueDto(id: venue.id ?? "",
+                        photo: photoUrl,
+                        name: venue.name ?? "",
+                        latitude: venue.latitude ?? 0,
+                        longitude: venue.longitude ?? 0)
     }
 }
 

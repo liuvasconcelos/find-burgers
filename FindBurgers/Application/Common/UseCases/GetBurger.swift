@@ -19,4 +19,8 @@ class GetBurger {
         apiDataSource.findBurgersNear(latitude: latitude, longitude: longitude, loadCallback)
     }
     
+    func searchForPhotosOfAVenueBy(id: String, _ loadCallback: @escaping (BaseCallback<[PhotoResponse]>) -> Void) {
+        apiDataSource.searchForPhotosOfAVenueBy(id: id, loadCallback)
+    }
+    
 }

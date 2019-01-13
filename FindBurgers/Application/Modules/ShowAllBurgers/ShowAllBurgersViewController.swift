@@ -11,13 +11,14 @@ import MapKit
 import CoreLocation
 
 class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract, CLLocationManagerDelegate {
-    
+
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
     @IBOutlet weak var map: MKMapView!
     
     var locationManager : CLLocationManager!
-    var nearBurgers: [VenueResponse] = []
+    var nearVenues: [VenueDto] = []
+    var venuesOrder = 0
     
     lazy var presenter: ShowAllBurgersPresenterContract = {
         return ShowAllBurgersPresenter(view: self,
@@ -68,15 +69,11 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         map.addAnnotation(annotation)
     }
     
-    func showNear(burgers: [VenueResponse]) {
-        self.nearBurgers = burgers
-        
-        for burger in nearBurgers {
-            let coordinate = CLLocationCoordinate2D(latitude:  burger.latitude ?? 0, longitude: burger.longitude ?? 0)
-            addAnnotationAtCoordinate(coordinate: coordinate, title: burger.name ?? "")
-        }
+    func showNear(venue: VenueDto) {
+        self.nearVenues.append(venue)
+        let coordinate = CLLocationCoordinate2D(latitude:  venue.latitude ?? 0, longitude: venue.longitude ?? 0)
+        addAnnotationAtCoordinate(coordinate: coordinate, title: venue.name ?? "")
     }
-    
     
 }
 
@@ -96,9 +93,15 @@ extension ShowAllBurgersViewController: MKMapViewDelegate {
         else {
             annotationView!.annotation = annotation
         }
-        
-        let pinImage = UIImage(named: "tiago")?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
-        annotationView!.image = pinImage
+
+    
+        let imagePath = self.nearVenues[venuesOrder].photo ?? ""
+        if let url = NSURL(string: imagePath) {
+            if let data = NSData(contentsOf: url as URL) {
+                annotationView?.image = UIImage(data: data as Data)?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
+            }
+        }
+        self.venuesOrder+=1
         
         return annotationView
     }
