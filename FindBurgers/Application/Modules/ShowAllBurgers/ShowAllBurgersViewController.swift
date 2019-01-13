@@ -15,6 +15,8 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var photosCollectionView: ShowBurgersCollectionView!
     
     var locationManager : CLLocationManager!
     var nearVenues: [VenueDto] = []
@@ -27,6 +29,8 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.addGradient()
+
         locationManager                 = CLLocationManager()
         locationManager.delegate        = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -35,6 +39,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         
         map.delegate = self
         
+        photosCollectionView.viewContract = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,61 +78,19 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         self.nearVenues.append(venue)
         let coordinate = CLLocationCoordinate2D(latitude:  venue.latitude ?? 0, longitude: venue.longitude ?? 0)
         addAnnotationAtCoordinate(coordinate: coordinate, title: venue.name ?? "")
+        self.showPhotos()
     }
     
-}
-
-extension ShowAllBurgersViewController: MKMapViewDelegate {
-    func mapView (_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if !(annotation is MKPointAnnotation) {
-            return nil
-        }
+    func showBurgerDetails(title: String, photo: String) {
+        let controller: BurgerDetailsViewController = ViewUtils.loadNibNamed(BurgerDetailsViewController.NIB_NAME, owner: self)!
+        controller.set(title: title, photo: photo)
+        self.present(controller, animated: true, completion: nil)
         
-        let annotationIdentifier = "AnnotationIdentifier"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            annotationView!.canShowCallout = true
-        }
-        else {
-            annotationView!.annotation = annotation
-        }
-
-    
-        let imagePath = self.nearVenues[venuesOrder].photo ?? ""
-        if let url = NSURL(string: imagePath) {
-            if let data = NSData(contentsOf: url as URL) {
-                annotationView?.image = UIImage(data: data as Data)?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
-            }
-        }
-        
-        self.venuesOrder+=1
-        
-        return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let circleView = MKCircleRenderer(overlay: overlay)
-        circleView.strokeColor = UIColor.red
-        circleView.lineWidth = 1
-        return circleView
-    }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let current = venuesOrder - 1
-        if let annotationView = view.annotation, let annotationTitle = annotationView.title {
-            let controller: BurgerDetailsViewController = ViewUtils.loadNibNamed(BurgerDetailsViewController.NIB_NAME, owner: self)!
-            
-            if let image = self.nearVenues[current].photo {
-                if String(annotationTitle ?? "") != "My Location" {
-                    controller.set(title: String(annotationTitle ?? ""), photo: image)
-                    self.present(controller, animated: true, completion: nil)
-                }
-               
-            }
-            
-        }
+    func showPhotos() {
+        self.photosCollectionView.isHidden = false
+        self.photosCollectionView.set(burgers: self.nearVenues)
     }
     
 }

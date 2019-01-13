@@ -41,19 +41,17 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
 //        }
         
         for venue in venues {
-            if venue.id == "4dd82fb9e4cd37c893bf78c9" {
-                getBurger.searchForPhotosOfAVenueBy(id: "4dd82fb9e4cd37c893bf78c9") { (callback) in
-                    callback.onSuccess({ (photos) in
-                        self.view.showNear(venue: self.convertResponseToVenuePhotoDto(response: photos, venue: venue))
-                    })
-                    
-                    callback.onFailed({ (error) in
-                        print("falha")
-                    })
-                }
+            getBurger.searchForPhotosOfAVenueBy(id: "4dd82fb9e4cd37c893bf78c9") { (callback) in
+                callback.onSuccess({ (photos) in
+                    self.view.showNear(venue: self.convertResponseToVenuePhotoDto(response: photos, venue: venue))
+                })
+                
+                callback.onFailed({ (error) in
+                    print("falha")
+                })
             }
+            
         }
-        
     }
     
     fileprivate func convertResponseToVenuePhotoDto(response: [PhotoResponse], venue: VenueResponse) -> VenueDto {

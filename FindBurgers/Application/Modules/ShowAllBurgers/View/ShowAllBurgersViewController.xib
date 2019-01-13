@@ -17,23 +17,77 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-b3-tKB">
-                        <rect key="frame" x="0.0" y="33" width="375" height="300"/>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBF-39-cJj">
+                        <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOQ-wa-VmX">
+                                <rect key="frame" x="16" y="0.0" width="343" height="353"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-b3-tKB">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="353"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="353" id="4X1-Zw-0lI"/>
+                                    <constraint firstAttribute="bottom" secondItem="bvY-b3-tKB" secondAttribute="bottom" id="MhI-WX-QEK"/>
+                                    <constraint firstItem="bvY-b3-tKB" firstAttribute="leading" secondItem="vOQ-wa-VmX" secondAttribute="leading" id="RHu-dP-BGb"/>
+                                    <constraint firstAttribute="trailing" secondItem="bvY-b3-tKB" secondAttribute="trailing" id="clX-xa-9X1"/>
+                                    <constraint firstItem="bvY-b3-tKB" firstAttribute="top" secondItem="vOQ-wa-VmX" secondAttribute="top" id="rp2-CV-7iY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mJf-KV-rvv" customClass="ShowBurgersCollectionView" customModule="FindBurgers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="353" width="375" height="202"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hnW-2B-zVw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="e0D-4F-35z"/>
+                            <constraint firstItem="vOQ-wa-VmX" firstAttribute="top" secondItem="DkN-5e-Ti4" secondAttribute="top" id="AyU-lv-dUJ"/>
+                            <constraint firstItem="DkN-5e-Ti4" firstAttribute="trailing" secondItem="vOQ-wa-VmX" secondAttribute="trailing" constant="16" id="FuY-Pc-jnf"/>
+                            <constraint firstAttribute="trailing" secondItem="mJf-KV-rvv" secondAttribute="trailing" constant="16" id="PZA-I7-Dpj"/>
+                            <constraint firstItem="mJf-KV-rvv" firstAttribute="leading" secondItem="DkN-5e-Ti4" secondAttribute="leading" id="VIz-DE-rZe"/>
+                            <constraint firstItem="DkN-5e-Ti4" firstAttribute="trailing" secondItem="mJf-KV-rvv" secondAttribute="trailing" id="Z9K-ah-Suy"/>
+                            <constraint firstItem="mJf-KV-rvv" firstAttribute="top" secondItem="vOQ-wa-VmX" secondAttribute="bottom" id="gIF-i4-G75"/>
+                            <constraint firstItem="vOQ-wa-VmX" firstAttribute="leading" secondItem="DkN-5e-Ti4" secondAttribute="leading" constant="16" id="hOj-8u-U0u"/>
+                            <constraint firstAttribute="bottom" secondItem="mJf-KV-rvv" secondAttribute="bottom" id="tDf-u3-y2Q"/>
+                            <constraint firstItem="DkN-5e-Ti4" firstAttribute="bottom" secondItem="mJf-KV-rvv" secondAttribute="bottom" id="vfw-qm-dzT"/>
                         </constraints>
-                    </mapView>
+                        <viewLayoutGuide key="safeArea" id="DkN-5e-Ti4"/>
+                    </scrollView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIP-v4-p53">
+                        <rect key="frame" x="16" y="60" width="200" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="qz4-4K-o4O"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="1" green="0.27053900860000002" blue="0.86934147390000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstItem="bvY-b3-tKB" firstAttribute="leading" secondItem="xe7-Gq-c2q" secondAttribute="leading" id="Prv-a0-szu"/>
-                    <constraint firstItem="bvY-b3-tKB" firstAttribute="top" secondItem="S71-dn-mlw" secondAttribute="top" constant="13" id="YHn-Rp-bGl"/>
-                    <constraint firstItem="bvY-b3-tKB" firstAttribute="trailing" secondItem="S71-dn-mlw" secondAttribute="trailing" id="iqx-bc-naz"/>
+                    <constraint firstItem="CBF-39-cJj" firstAttribute="top" secondItem="iIP-v4-p53" secondAttribute="bottom" constant="12" id="0ds-EH-lbq"/>
+                    <constraint firstItem="CBF-39-cJj" firstAttribute="bottom" secondItem="S71-dn-mlw" secondAttribute="bottom" id="0oJ-U9-Bch"/>
+                    <constraint firstItem="iIP-v4-p53" firstAttribute="top" secondItem="S71-dn-mlw" secondAttribute="top" constant="40" id="FFT-k3-jOc"/>
+                    <constraint firstItem="iIP-v4-p53" firstAttribute="leading" secondItem="S71-dn-mlw" secondAttribute="leading" constant="16" id="KQg-YL-XvV"/>
+                    <constraint firstItem="CBF-39-cJj" firstAttribute="leading" secondItem="S71-dn-mlw" secondAttribute="leading" id="RbV-q8-9kK"/>
+                    <constraint firstItem="CBF-39-cJj" firstAttribute="trailing" secondItem="S71-dn-mlw" secondAttribute="trailing" id="pA3-8z-USP"/>
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="S71-dn-mlw"/>
             </view>
             <connections>
+                <outlet property="mainView" destination="xe7-Gq-c2q" id="j5E-7l-5fI"/>
                 <outlet property="map" destination="bvY-b3-tKB" id="BbP-AA-9cT"/>
+                <outlet property="photosCollectionView" destination="mJf-KV-rvv" id="vEa-nm-XVb"/>
             </connections>
             <point key="canvasLocation" x="596" y="-111.0944527736132"/>
         </viewController>
