@@ -25,12 +25,7 @@ class BurgerDetailsViewController: UIViewController, BurgerDetailsViewContract {
     
     func set(title: String, photo: String) {
         venueTitle.text  = title
-        
-        if let url = NSURL(string: photo) {
-            if let data = NSData(contentsOf: url as URL) {
-                venueImage.image = UIImage(data: data as Data)
-            }
-        }
+        venueImage.set(image: photo)
     }
     
     @IBAction func dismissModal(_ sender: Any) {

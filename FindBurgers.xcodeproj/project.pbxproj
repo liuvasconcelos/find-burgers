@@ -16,6 +16,7 @@
 		53072AAC21E6827900A3E214 /* BasePhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */; };
 		53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAE21E6829D00A3E214 /* PhotoResponse.swift */; };
 		53072AB221E6875800A3E214 /* VenueDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB121E6875800A3E214 /* VenueDto.swift */; };
+		53072AB421EB978F00A3E214 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */; };
 		538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA09C21E2B790001237B1 /* AppDelegate.swift */; };
 		538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A321E2B791001237B1 /* Assets.xcassets */; };
 		538EA0A721E2B791001237B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhotoResponse.swift; sourceTree = "<group>"; };
 		53072AAE21E6829D00A3E214 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		53072AB121E6875800A3E214 /* VenueDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDto.swift; sourceTree = "<group>"; };
+		53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		538EA09921E2B790001237B1 /* FindBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EA09C21E2B790001237B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		538EA0A321E2B791001237B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				538EA0F521E424D3001237B1 /* UIImageExtension.swift */,
+				53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53072AB421EB978F00A3E214 /* UIImageViewExtension.swift in Sources */,
 				53072AA821E5784E00A3E214 /* InjectionApiDataSource.swift in Sources */,
 				538EA0E921E2BCDE001237B1 /* ImageIdentificationApiDataSourceImpl.swift in Sources */,
 				538EA0E121E2BC9B001237B1 /* GetBurger.swift in Sources */,
