@@ -101,6 +101,7 @@ extension ShowAllBurgersViewController: MKMapViewDelegate {
                 annotationView?.image = UIImage(data: data as Data)?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
             }
         }
+        
         self.venuesOrder+=1
         
         return annotationView
@@ -114,6 +115,19 @@ extension ShowAllBurgersViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(view.annotation?.title!! as Any)
+        let current = venuesOrder - 1
+        if let annotationView = view.annotation, let annotationTitle = annotationView.title {
+            let controller: BurgerDetailsViewController = ViewUtils.loadNibNamed(BurgerDetailsViewController.NIB_NAME, owner: self)!
+            
+            if let image = self.nearVenues[current].photo {
+                if String(annotationTitle ?? "") != "My Location" {
+                    controller.set(title: String(annotationTitle ?? ""), photo: image)
+                    self.present(controller, animated: true, completion: nil)
+                }
+               
+            }
+            
+        }
     }
+    
 }

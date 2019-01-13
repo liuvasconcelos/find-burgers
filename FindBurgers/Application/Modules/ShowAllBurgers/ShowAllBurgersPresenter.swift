@@ -61,6 +61,10 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
         if let firstPhoto = response.first {
             photoUrl = "\(firstPhoto.prefix!)\(firstPhoto.width!)x\(firstPhoto.height!)\(firstPhoto.suffix!)"
         }
+
+        //REMOVE LATER
+        photoUrl = "https://fastly.4sqi.net/img/general/720x960/27390522_joS6ywLnQ6X1noPRh2Kycs1-XtAAD5XZs5wmH1UamUQ.jpg"
+        
         return VenueDto(id: venue.id ?? "",
                         photo: photoUrl,
                         name: venue.name ?? "",
