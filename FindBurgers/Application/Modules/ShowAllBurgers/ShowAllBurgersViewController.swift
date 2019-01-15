@@ -24,6 +24,13 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     var currentLocationDidNotSet = true
     
+    // let tartuBusStationLatitude = 58.3780
+    let tartuBusStationLatitude  = -9.66629
+    let tartuBusStatiusLongitude = -35.7351
+//    let tartuBusStatiusLongitude = 26.7321
+    
+    var tartuBusStationLocation: CLLocation?
+    
     lazy var presenter: ShowAllBurgersPresenterContract = {
         return ShowAllBurgersPresenter(view: self,
                                        getBurger: InjectionUseCase.provideGetBurger(),
@@ -47,8 +54,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        tartuBusStationLocation = CLLocation(latitude: self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -68,7 +74,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
                 currentLocationDidNotSet = false
                 
                 //CHANGE TO ESTONIA METRO COORDINATES 58.3780, 26.7321
-                let coordinate = CLLocationCoordinate2D(latitude:  -9.66629, longitude: -35.7351)
+                let coordinate = CLLocationCoordinate2D(latitude:  self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
                 let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
                 map.addOverlay(circleOverlay)
             }
@@ -86,8 +92,13 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     func showNear(venue: VenueDto) {
         self.nearVenues.append(venue)
         let coordinate = CLLocationCoordinate2D(latitude:  venue.latitude ?? 0, longitude: venue.longitude ?? 0)
-        addAnnotationAtCoordinate(coordinate: coordinate, title: venue.name ?? "")
-        self.showPhotos()
+        let venueLocation = CLLocation(latitude: venue.latitude ?? 0, longitude: venue.longitude ?? 0)
+        
+        if venueLocation.distance(from: self.tartuBusStationLocation!) > 1000 {
+            addAnnotationAtCoordinate(coordinate: coordinate, title: venue.name ?? "")
+            self.showPhotos()
+        }
+        
     }
     
     func showBurgerDetails(title: String, photo: String) {
