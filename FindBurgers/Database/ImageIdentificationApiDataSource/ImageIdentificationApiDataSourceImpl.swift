@@ -37,7 +37,7 @@ class ImageIdentificationApiDataSourceImpl: ImageIdentificationApiDataSource {
             case .success(let response):
                 loadCallback(BaseCallback.success(response))
                 break
-            case .failure(let error):
+            case .failure( _):
                 loadCallback(BaseCallback.failed())
                 break
             }

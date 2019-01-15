@@ -27,15 +27,16 @@ extension ShowAllBurgersViewController: MKMapViewDelegate {
             annotationView!.annotation = annotation
         }
         
-        
-        let imagePath = self.nearVenues[venuesOrder].photo ?? ""
-        if let url = NSURL(string: imagePath) {
-            if let data = NSData(contentsOf: url as URL) {
-                annotationView?.image = UIImage(data: data as Data)?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
+        if venuesOrder < self.nearVenues.count {
+            let imagePath = self.nearVenues[venuesOrder].photo ?? ""
+            if let url = NSURL(string: imagePath) {
+                if let data = NSData(contentsOf: url as URL) {
+                    annotationView?.image = UIImage(data: data as Data)?.resizeImage(CGSize(width: 20, height: 20))?.roundedImage()
+                }
             }
+            
+            self.venuesOrder+=1
         }
-        
-        self.venuesOrder+=1
         
         return annotationView
     }

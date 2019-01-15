@@ -15,6 +15,7 @@ protocol ShowAllBurgersPresenterContract {
 protocol  ShowAllBurgersViewContract {
     func showNear(venue: VenueDto)
     func showBurgerDetails(title: String, photo: String)
+    func showError()
 }
 
 protocol ShowBurgersCollectionViewCellDelegate: class {

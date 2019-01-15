@@ -6,6 +6,8 @@
 //  Copyright © 2019 Livia Vasconcelos. All rights reserved.
 //
 
+import UIKit
+
 class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
     
     private let view:      ShowAllBurgersViewContract
@@ -24,7 +26,7 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
                 self.searchForPhotosOfAVenueBy(burgers)
             })
             callback.onFailed({ (error) in
-                print("falha")
+                self.view.showError()
             })
         }
     }
@@ -37,28 +39,31 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
 //                })
 //
 //                callback.onFailed({ (error) in
-//                    print("falha")
+//                    self.view.showError()
 //                })
 //            }
 //        }
 //
+        var index = 1
+        
+        for venue in venues {
+            if index < 5 {
+                let urls = ["https://fastly.4sqi.net/img/general/720x540/zy_kqh6KcchiJf9Cf_gMKMU4PQIta8ajtkUzjFv9eiI.jpg",
+                            "https://fastly.4sqi.net/img/general/1440x1920/51988053__6lLEAwG0BqqHZY5UUY_bI4RK-ieYEPI8jD3IqZ3Jq0.jpg",
+                            "https://fastly.4sqi.net/img/general/960x720/36549713_pXpsBMAaAApl0z6yC7F3weYHsVl9xrz-dooCGk9Lbm0.jpg"]
+                
+                self.lookOnlyForBurgers(urls: urls, venue: venue)
+            }
+            index+=1
+        }
         
         
-        let urls = ["https://fastly.4sqi.net/img/general/720x960/27390522_joS6ywLnQ6X1noPRh2Kycs1-XtAAD5XZs5wmH1UamUQ.jpg",
-                    "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0RG000000nvq8uMAA/5702ad59e4b003b478eb4d56.jpg&w=620&h=400",
-                    "https://http2.mlstatic.com/carrinho-de-lanche-com-chapa-bifeteira-e-vidro-inox-r2-D_NQ_NP_732414-MLB25580705633_052017-F.jpg"]
-        
-        self.lookOnlyForBurgers(urls: urls, venue: venues.first!)
     }
     
     fileprivate func lookOnlyForBurgers(urls: [String], venue: VenueResponse) {
         getImage.lookForBurguersBy(venuesPhotosUrl: urls) { (callback) in
             callback.onSuccess({ (burgerPhoto) in
                 self.view.showNear(venue: self.convertResponseToVenuePhotoDto(photo: burgerPhoto, venue: venue))
-            })
-            
-            callback.onFailed({ (error) in
-                print("2")
             })
         }
     }
