@@ -14,4 +14,9 @@ class GetImage {
     init(apiDataSource: ImageIdentificationApiDataSource) {
         self.apiDataSource = apiDataSource
     }
+    
+    func lookForBurguersBy(venuesPhotosUrl: [String], _ loadCallback: @escaping (BaseCallback<BurgerPhotoResponse>) -> Void) {
+        apiDataSource.lookForBurguersBy(venuesPhotosUrl: venuesPhotosUrl, loadCallback)
+    }
+
 }

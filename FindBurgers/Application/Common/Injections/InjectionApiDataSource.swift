@@ -13,4 +13,8 @@ class InjectionApiDataSource {
         return FoursquareApiDataSourceImpl.getInstance()
     }
     
+    static func provideImageIdentificationApiDataSource() -> ImageIdentificationApiDataSource {
+        return ImageIdentificationApiDataSourceImpl.getInstance()
+    }
+    
 }

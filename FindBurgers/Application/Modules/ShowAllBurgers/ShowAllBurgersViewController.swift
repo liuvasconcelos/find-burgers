@@ -24,7 +24,8 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     lazy var presenter: ShowAllBurgersPresenterContract = {
         return ShowAllBurgersPresenter(view: self,
-                                       getBurger: InjectionUseCase.provideGetBurger())
+                                       getBurger: InjectionUseCase.provideGetBurger(),
+                                       getImage: InjectionUseCase.provideGetImage())
     }()
     
     override func viewDidLoad() {

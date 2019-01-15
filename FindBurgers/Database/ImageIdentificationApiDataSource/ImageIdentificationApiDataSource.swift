@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ImageIdentificationApiDataSource {
-    
+    func lookForBurguersBy(venuesPhotosUrl: [String], _ loadCallback: @escaping (BaseCallback<BurgerPhotoResponse>) -> Void)
 }

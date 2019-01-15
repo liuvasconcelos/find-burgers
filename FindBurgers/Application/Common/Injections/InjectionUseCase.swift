@@ -13,6 +13,10 @@ class InjectionUseCase {
     static func provideGetBurger() -> GetBurger {
         return GetBurger(apiDataSource: InjectionApiDataSource.provideFoursquareApiDataSource())
     }
+    
+    static func provideGetImage() -> GetImage {
+        return GetImage(apiDataSource: InjectionApiDataSource.provideImageIdentificationApiDataSource())
+    }
 
 }
 

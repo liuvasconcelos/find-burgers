@@ -22,6 +22,8 @@
 		53072ABB21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */; };
 		53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */; };
 		53072AC121EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */; };
+		53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */; };
+		53072AC721ED5C3800A3E214 /* BurgerPhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */; };
 		538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA09C21E2B790001237B1 /* AppDelegate.swift */; };
 		538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A321E2B791001237B1 /* Assets.xcassets */; };
 		538EA0A721E2B791001237B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBurgersCollectionViewCell.swift; sourceTree = "<group>"; };
 		53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllBurgersViewControllerMapViewExtension.swift; sourceTree = "<group>"; };
 		53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowBurgersCollectionViewCell.xib; sourceTree = "<group>"; };
+		53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerPhotoResponse.swift; sourceTree = "<group>"; };
+		53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerPhotoRequest.swift; sourceTree = "<group>"; };
 		538EA09921E2B790001237B1 /* FindBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EA09C21E2B790001237B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		538EA0A321E2B791001237B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			children = (
 				53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */,
 				53072AAE21E6829D00A3E214 /* PhotoResponse.swift */,
+				53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */,
+				53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -650,6 +656,7 @@
 				538EA0E121E2BC9B001237B1 /* GetBurger.swift in Sources */,
 				53072AA121E5660000A3E214 /* VenueResponse.swift in Sources */,
 				538EA0E721E2BCD3001237B1 /* ImageIdentificationApiDataSource.swift in Sources */,
+				53072AC721ED5C3800A3E214 /* BurgerPhotoRequest.swift in Sources */,
 				538EA0E521E2BCC3001237B1 /* FoursquareApiDataSourceImpl.swift in Sources */,
 				538EA0ED21E2BE3F001237B1 /* BurgerDetailsContract.swift in Sources */,
 				53072A9C21E5658A00A3E214 /* BaseCallback.swift in Sources */,
@@ -664,6 +671,7 @@
 				53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */,
 				538EA0DA21E2BC00001237B1 /* BurgerDetailsViewController.swift in Sources */,
 				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,
+				53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */,
 				53072AB921EBA14200A3E214 /* ShowBurgersCollectionView.swift in Sources */,
 				538EA0D121E2B995001237B1 /* ShowAllBurgersViewController.swift in Sources */,
 				53072AB221E6875800A3E214 /* VenueDto.swift in Sources */,
