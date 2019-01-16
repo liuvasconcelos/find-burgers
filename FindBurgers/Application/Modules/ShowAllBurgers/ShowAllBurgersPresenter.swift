@@ -32,31 +32,17 @@ class ShowAllBurgersPresenter: ShowAllBurgersPresenterContract {
     }
     
     func searchForPhotosOfAVenueBy(_ venues: [VenueResponse]) {
-//        for venue in venues {
-//            getBurger.searchForPhotosOfAVenueBy(id: venue.id!) { (callback) in
-//                callback.onSuccess({ (photos) in
-//                    self.lookOnlyForBurgers(urls: self.buildPhotosUrl(response: photos), venue: venue)
-//                })
-//
-//                callback.onFailed({ (error) in
-//                    self.view.showError()
-//                })
-//            }
-//        }
-//
-        var index = 1
-        
         for venue in venues {
-            if index < 9 {
-                let urls = ["https://fastly.4sqi.net/img/general/720x540/zy_kqh6KcchiJf9Cf_gMKMU4PQIta8ajtkUzjFv9eiI.jpg",
-                            "https://fastly.4sqi.net/img/general/1440x1920/51988053__6lLEAwG0BqqHZY5UUY_bI4RK-ieYEPI8jD3IqZ3Jq0.jpg",
-                            "https://fastly.4sqi.net/img/general/960x720/36549713_pXpsBMAaAApl0z6yC7F3weYHsVl9xrz-dooCGk9Lbm0.jpg"]
-                
-                self.lookOnlyForBurgers(urls: urls, venue: venue)
+            getBurger.searchForPhotosOfAVenueBy(id: venue.id!) { (callback) in
+                callback.onSuccess({ (photos) in
+                    self.lookOnlyForBurgers(urls: self.buildPhotosUrl(response: photos), venue: venue)
+                })
+
+                callback.onFailed({ (error) in
+                    self.view.showError()
+                })
             }
-            index+=1
         }
-        
         
     }
     

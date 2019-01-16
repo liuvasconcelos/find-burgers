@@ -24,10 +24,8 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     var currentLocationDidNotSet = true
     
-    // let tartuBusStationLatitude = 58.3780
-    let tartuBusStationLatitude  = -9.66629
-    let tartuBusStatiusLongitude = -35.7351
-//    let tartuBusStatiusLongitude = 26.7321
+    let tartuBusStationLatitude = 58.3780
+    let tartuBusStatiusLongitude = 26.7321
     
     @IBOutlet weak var mainView: UIView!
     var tartuBusStationLocation: CLLocation?
@@ -83,7 +81,6 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
                 presenter.findBurgersNear(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 currentLocationDidNotSet = false
                 
-                //CHANGE TO ESTONIA METRO COORDINATES 58.3780, 26.7321
                 let coordinate = CLLocationCoordinate2D(latitude:  self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
                 let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
                 map!.addOverlay(circleOverlay)

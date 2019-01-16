@@ -31,22 +31,16 @@ class FoursquareApiDataSourceImpl: FoursquareApiDataSource {
         self.getDate()
         let url = "https://api.foursquare.com/v2/venues/search?ll=\(latitude),\(longitude)&client_id=TGJUV40BUPGJH0ODDBLARJLHSIMHM3SXJ05V0VTAOSBTQZPO&client_secret=0KSE4A3DQ3L2VIIPKHNW4A5J5HFGMVVASENIESQU23VCIZLO&v=\(self.currentDate)"
         
-        //REMOVE THID COUNT - just for development
-        var count = 0
-        
-        if count == 0 {
-        count+=1
-            Alamofire.request(url, method: .get).responseObject {
-                (response: DataResponse<BaseVenueResponse>) in
-                switch(response.result) {
-                case .success(let response):
-                    guard let venues = response.response else{ return }
-                    loadCallback(BaseCallback.success(venues))
-                    break
-                case .failure(let error):
-                    loadCallback(BaseCallback.failed(error: error))
-                    break
-                }
+        Alamofire.request(url, method: .get).responseObject {
+            (response: DataResponse<BaseVenueResponse>) in
+            switch(response.result) {
+            case .success(let response):
+                guard let venues = response.response else{ return }
+                loadCallback(BaseCallback.success(venues))
+                break
+            case .failure(let error):
+                loadCallback(BaseCallback.failed(error: error))
+                break
             }
         }
         
