@@ -18,7 +18,6 @@
 		53072AB221E6875800A3E214 /* VenueDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB121E6875800A3E214 /* VenueDto.swift */; };
 		53072AB421EB978F00A3E214 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */; };
 		53072AB621EB9BD000A3E214 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB521EB9BD000A3E214 /* UIViewExtension.swift */; };
-		53072AB921EBA14200A3E214 /* ShowBurgersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB821EBA14200A3E214 /* ShowBurgersCollectionView.swift */; };
 		53072ABB21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */; };
 		53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */; };
 		53072AC121EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */; };
@@ -84,7 +83,6 @@
 		53072AB121E6875800A3E214 /* VenueDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDto.swift; sourceTree = "<group>"; };
 		53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		53072AB521EB9BD000A3E214 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		53072AB821EBA14200A3E214 /* ShowBurgersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBurgersCollectionView.swift; sourceTree = "<group>"; };
 		53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBurgersCollectionViewCell.swift; sourceTree = "<group>"; };
 		53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllBurgersViewControllerMapViewExtension.swift; sourceTree = "<group>"; };
 		53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowBurgersCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -210,14 +208,6 @@
 				53072AB121E6875800A3E214 /* VenueDto.swift */,
 			);
 			path = Dto;
-			sourceTree = "<group>";
-		};
-		53072AB721EBA11E00A3E214 /* CollectionView2 */ = {
-			isa = PBXGroup;
-			children = (
-				53072AB821EBA14200A3E214 /* ShowBurgersCollectionView.swift */,
-			);
-			path = CollectionView2;
 			sourceTree = "<group>";
 		};
 		53072ABC21EBA1EA00A3E214 /* Cell */ = {
@@ -357,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				53EA068D21EEA80F007AFC04 /* CollectionView */,
-				53072AB721EBA11E00A3E214 /* CollectionView2 */,
 				538EA0D521E2BBC0001237B1 /* ShowAllBurgersViewController.xib */,
 			);
 			path = View;
@@ -708,7 +697,6 @@
 				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,
 				53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */,
 				53EA069221EEA92E007AFC04 /* HeaderView.swift in Sources */,
-				53072AB921EBA14200A3E214 /* ShowBurgersCollectionView.swift in Sources */,
 				538EA0D121E2B995001237B1 /* ShowAllBurgersViewController.swift in Sources */,
 				53072AB221E6875800A3E214 /* VenueDto.swift in Sources */,
 				53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */,

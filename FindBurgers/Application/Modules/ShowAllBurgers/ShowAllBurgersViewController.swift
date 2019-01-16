@@ -15,6 +15,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
     @IBOutlet weak var photosCollectionView: BurgerCollectionView!
+    @IBOutlet weak var coloredBackground: UIView!
     
     var locationManager : CLLocationManager!
     var nearVenues: [VenueDto] = []
@@ -28,6 +29,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     let tartuBusStatiusLongitude = -35.7351
 //    let tartuBusStatiusLongitude = 26.7321
     
+    @IBOutlet weak var mainView: UIView!
     var tartuBusStationLocation: CLLocation?
     
     lazy var presenter: ShowAllBurgersPresenterContract = {
@@ -42,7 +44,12 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         photosCollectionView.set(headerDelegate: self)
         
         photosCollectionView.viewContract = self
-        self.view.addGradient()
+        mainView.addGradient()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mainView.addGradient()
     }
     
     override func viewWillAppear(_ animated: Bool) {

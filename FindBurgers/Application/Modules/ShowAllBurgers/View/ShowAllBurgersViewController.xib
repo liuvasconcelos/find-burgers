@@ -17,6 +17,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2K-Zj-1H4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nlx-OO-xZ1" customClass="BurgerCollectionView" customModule="FindBurgers" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="25" width="320" height="543"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,6 +42,8 @@
                 <viewLayoutGuide key="safeArea" id="TxD-gM-Qhi"/>
             </view>
             <connections>
+                <outlet property="coloredBackground" destination="e2K-Zj-1H4" id="2MB-L6-V9x"/>
+                <outlet property="mainView" destination="qK1-IK-9kr" id="tdZ-nQ-lMa"/>
                 <outlet property="photosCollectionView" destination="nlx-OO-xZ1" id="7ur-Yq-q5U"/>
             </connections>
             <point key="canvasLocation" x="-650.39999999999998" y="157.87106446776613"/>
