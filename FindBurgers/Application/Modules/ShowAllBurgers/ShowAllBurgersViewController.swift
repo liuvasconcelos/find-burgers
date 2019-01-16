@@ -14,9 +14,10 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
    
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
-    @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var photosCollectionView: ShowBurgersCollectionView!
+//    @IBOutlet weak var map: MKMapView!
+    
+    @IBOutlet weak var photosCollectionView: BurgerCollectionView!
+    @IBOutlet weak var mainScrollView: UIScrollView!
     
     var locationManager : CLLocationManager!
     var nearVenues: [VenueDto] = []
@@ -39,17 +40,16 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.addGradient()
-
+        
         locationManager                 = CLLocationManager()
         locationManager.delegate        = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//        locationManager.distanceFilter  = 10000
         locationManager.requestWhenInUseAuthorization()
         
-        map.delegate = self
+//        map.delegate = self
         
         photosCollectionView.viewContract = self
+        self.view.addGradient()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +68,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
             if let location = locations.first {
                 let span       = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region     = MKCoordinateRegion(center: location.coordinate, span: span)
-                map.setRegion(region, animated: false)
+//                map.setRegion(region, animated: false)
 
                 presenter.findBurgersNear(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 currentLocationDidNotSet = false
@@ -76,7 +76,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
                 //CHANGE TO ESTONIA METRO COORDINATES 58.3780, 26.7321
                 let coordinate = CLLocationCoordinate2D(latitude:  self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
                 let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
-                map.addOverlay(circleOverlay)
+//                map.addOverlay(circleOverlay)
             }
         }
         
@@ -86,7 +86,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = title
-        map.addAnnotation(annotation)
+//        map.addAnnotation(annotation)
     }
     
     func showNear(venue: VenueDto) {

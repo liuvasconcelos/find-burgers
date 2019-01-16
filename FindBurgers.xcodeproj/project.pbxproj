@@ -45,6 +45,9 @@
 		538EA0EF21E2C042001237B1 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EE21E2C042001237B1 /* GetImage.swift */; };
 		538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F221E38F56001237B1 /* ViewUtils.swift */; };
 		538EA0F621E424D3001237B1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F521E424D3001237B1 /* UIImageExtension.swift */; };
+		53EA068F21EEA81D007AFC04 /* BurgerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */; };
+		53EA069221EEA92E007AFC04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA069121EEA92E007AFC04 /* HeaderView.swift */; };
+		53EA069421EEA981007AFC04 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EA069321EEA981007AFC04 /* HeaderView.xib */; };
 		754334D4FDD7FAC925010D30 /* Pods_FindBurgersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B68C16496EA1513C98F3D17 /* Pods_FindBurgersTests.framework */; };
 		928B929D36BA08EF61D12076 /* Pods_FindBurgersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C438F4897F642EEF3586D145 /* Pods_FindBurgersUITests.framework */; };
 		EFA6E137DEDBD943B9BC9A84 /* Pods_FindBurgers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBE6E5D9C3A70E209FA868E /* Pods_FindBurgers.framework */; };
@@ -114,6 +117,9 @@
 		538EA0EE21E2C042001237B1 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
 		538EA0F221E38F56001237B1 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		538EA0F521E424D3001237B1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionView.swift; sourceTree = "<group>"; };
+		53EA069121EEA92E007AFC04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		53EA069321EEA981007AFC04 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		59F968E9A6BC44D7C0E091B1 /* Pods-FindBurgers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgers.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgers/Pods-FindBurgers.release.xcconfig"; sourceTree = "<group>"; };
 		8B68C16496EA1513C98F3D17 /* Pods_FindBurgersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindBurgersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F093FB072362A6A9CB46F72 /* Pods-FindBurgersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgersUITests/Pods-FindBurgersUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,13 +212,12 @@
 			path = Dto;
 			sourceTree = "<group>";
 		};
-		53072AB721EBA11E00A3E214 /* CollectionView */ = {
+		53072AB721EBA11E00A3E214 /* CollectionView2 */ = {
 			isa = PBXGroup;
 			children = (
-				53072ABC21EBA1EA00A3E214 /* Cell */,
 				53072AB821EBA14200A3E214 /* ShowBurgersCollectionView.swift */,
 			);
-			path = CollectionView;
+			path = CollectionView2;
 			sourceTree = "<group>";
 		};
 		53072ABC21EBA1EA00A3E214 /* Cell */ = {
@@ -308,6 +313,7 @@
 		538EA0CC21E2B8C0001237B1 /* ShowAllBurgers */ = {
 			isa = PBXGroup;
 			children = (
+				53EA068821EEA237007AFC04 /* View1 */,
 				53072ABD21EBA40600A3E214 /* Extensions */,
 				53072AB021E6874100A3E214 /* Dto */,
 				538EA0D421E2B9A7001237B1 /* View */,
@@ -350,7 +356,8 @@
 		538EA0D421E2B9A7001237B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				53072AB721EBA11E00A3E214 /* CollectionView */,
+				53EA068D21EEA80F007AFC04 /* CollectionView */,
+				53072AB721EBA11E00A3E214 /* CollectionView2 */,
 				538EA0D521E2BBC0001237B1 /* ShowAllBurgersViewController.xib */,
 			);
 			path = View;
@@ -409,6 +416,32 @@
 				53072AB521EB9BD000A3E214 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53EA068821EEA237007AFC04 /* View1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View1;
+			sourceTree = "<group>";
+		};
+		53EA068D21EEA80F007AFC04 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				53072ABC21EBA1EA00A3E214 /* Cell */,
+				53EA069021EEA922007AFC04 /* Header */,
+				53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		53EA069021EEA922007AFC04 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				53EA069121EEA92E007AFC04 /* HeaderView.swift */,
+				53EA069321EEA981007AFC04 /* HeaderView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		7AD3503AF2854838F90E1EBF /* Pods */ = {
@@ -547,6 +580,7 @@
 				538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */,
 				53072AC121EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib in Resources */,
 				538EA0DD21E2BC35001237B1 /* BurgerDetailsViewController.xib in Resources */,
+				53EA069421EEA981007AFC04 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,8 +704,10 @@
 				53072ABB21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift in Sources */,
 				53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */,
 				538EA0DA21E2BC00001237B1 /* BurgerDetailsViewController.swift in Sources */,
+				53EA068F21EEA81D007AFC04 /* BurgerCollectionView.swift in Sources */,
 				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,
 				53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */,
+				53EA069221EEA92E007AFC04 /* HeaderView.swift in Sources */,
 				53072AB921EBA14200A3E214 /* ShowBurgersCollectionView.swift in Sources */,
 				538EA0D121E2B995001237B1 /* ShowAllBurgersViewController.swift in Sources */,
 				53072AB221E6875800A3E214 /* VenueDto.swift in Sources */,
