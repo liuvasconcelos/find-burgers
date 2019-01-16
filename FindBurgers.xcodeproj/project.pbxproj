@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53072A9C21E5658A00A3E214 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072A9B21E5658A00A3E214 /* BaseCallback.swift */; };
+		53072A9E21E565B200A3E214 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072A9D21E565B200A3E214 /* CallbackEnum.swift */; };
+		53072AA121E5660000A3E214 /* VenueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA021E5660000A3E214 /* VenueResponse.swift */; };
+		53072AA321E573D200A3E214 /* BaseVenueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA221E573D200A3E214 /* BaseVenueResponse.swift */; };
+		53072AA621E577FB00A3E214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA521E577FB00A3E214 /* InjectionUseCase.swift */; };
+		53072AA821E5784E00A3E214 /* InjectionApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */; };
+		53072AAC21E6827900A3E214 /* BasePhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */; };
+		53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AAE21E6829D00A3E214 /* PhotoResponse.swift */; };
+		53072AB221E6875800A3E214 /* VenueDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB121E6875800A3E214 /* VenueDto.swift */; };
+		53072AB421EB978F00A3E214 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */; };
+		53072AB621EB9BD000A3E214 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AB521EB9BD000A3E214 /* UIViewExtension.swift */; };
+		53072ABB21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */; };
+		53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */; };
+		53072AC121EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */; };
+		53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */; };
+		53072AC721ED5C3800A3E214 /* BurgerPhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */; };
 		538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA09C21E2B790001237B1 /* AppDelegate.swift */; };
-		538EA09F21E2B790001237B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA09E21E2B790001237B1 /* ViewController.swift */; };
-		538EA0A221E2B790001237B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A021E2B790001237B1 /* Main.storyboard */; };
 		538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A321E2B791001237B1 /* Assets.xcassets */; };
 		538EA0A721E2B791001237B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */; };
 		538EA0B221E2B791001237B1 /* FindBurgersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0B121E2B791001237B1 /* FindBurgersTests.swift */; };
@@ -28,6 +42,14 @@
 		538EA0EB21E2BD7C001237B1 /*  ShowAllBurgersContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EA21E2BD7C001237B1 /*  ShowAllBurgersContract.swift */; };
 		538EA0ED21E2BE3F001237B1 /* BurgerDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EC21E2BE3F001237B1 /* BurgerDetailsContract.swift */; };
 		538EA0EF21E2C042001237B1 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0EE21E2C042001237B1 /* GetImage.swift */; };
+		538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F221E38F56001237B1 /* ViewUtils.swift */; };
+		538EA0F621E424D3001237B1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EA0F521E424D3001237B1 /* UIImageExtension.swift */; };
+		53EA068F21EEA81D007AFC04 /* BurgerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */; };
+		53EA069221EEA92E007AFC04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA069121EEA92E007AFC04 /* HeaderView.swift */; };
+		53EA069421EEA981007AFC04 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EA069321EEA981007AFC04 /* HeaderView.xib */; };
+		754334D4FDD7FAC925010D30 /* Pods_FindBurgersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B68C16496EA1513C98F3D17 /* Pods_FindBurgersTests.framework */; };
+		928B929D36BA08EF61D12076 /* Pods_FindBurgersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C438F4897F642EEF3586D145 /* Pods_FindBurgersUITests.framework */; };
+		EFA6E137DEDBD943B9BC9A84 /* Pods_FindBurgers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBE6E5D9C3A70E209FA868E /* Pods_FindBurgers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +70,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28945F2B7907953EFDEA0FDA /* Pods-FindBurgersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgersTests/Pods-FindBurgersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FE868A53C7D2213FC7B6F8F /* Pods-FindBurgersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgersTests/Pods-FindBurgersTests.release.xcconfig"; sourceTree = "<group>"; };
+		53072A9B21E5658A00A3E214 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
+		53072A9D21E565B200A3E214 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
+		53072AA021E5660000A3E214 /* VenueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueResponse.swift; sourceTree = "<group>"; };
+		53072AA221E573D200A3E214 /* BaseVenueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVenueResponse.swift; sourceTree = "<group>"; };
+		53072AA521E577FB00A3E214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
+		53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionApiDataSource.swift; sourceTree = "<group>"; };
+		53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhotoResponse.swift; sourceTree = "<group>"; };
+		53072AAE21E6829D00A3E214 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		53072AB121E6875800A3E214 /* VenueDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDto.swift; sourceTree = "<group>"; };
+		53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		53072AB521EB9BD000A3E214 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBurgersCollectionViewCell.swift; sourceTree = "<group>"; };
+		53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllBurgersViewControllerMapViewExtension.swift; sourceTree = "<group>"; };
+		53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowBurgersCollectionViewCell.xib; sourceTree = "<group>"; };
+		53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerPhotoResponse.swift; sourceTree = "<group>"; };
+		53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerPhotoRequest.swift; sourceTree = "<group>"; };
 		538EA09921E2B790001237B1 /* FindBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EA09C21E2B790001237B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		538EA09E21E2B790001237B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		538EA0A121E2B790001237B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		538EA0A321E2B791001237B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		538EA0A621E2B791001237B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		538EA0A821E2B791001237B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +113,18 @@
 		538EA0EA21E2BD7C001237B1 /*  ShowAllBurgersContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ShowAllBurgersContract.swift"; sourceTree = "<group>"; };
 		538EA0EC21E2BE3F001237B1 /* BurgerDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerDetailsContract.swift; sourceTree = "<group>"; };
 		538EA0EE21E2C042001237B1 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
+		538EA0F221E38F56001237B1 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		538EA0F521E424D3001237B1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionView.swift; sourceTree = "<group>"; };
+		53EA069121EEA92E007AFC04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		53EA069321EEA981007AFC04 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		59F968E9A6BC44D7C0E091B1 /* Pods-FindBurgers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgers.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgers/Pods-FindBurgers.release.xcconfig"; sourceTree = "<group>"; };
+		8B68C16496EA1513C98F3D17 /* Pods_FindBurgersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindBurgersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F093FB072362A6A9CB46F72 /* Pods-FindBurgersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgersUITests/Pods-FindBurgersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C33FD5E5C13B724ECEBD956B /* Pods-FindBurgersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgersUITests/Pods-FindBurgersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C438F4897F642EEF3586D145 /* Pods_FindBurgersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindBurgersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B268B007657F1ED99596A9 /* Pods-FindBurgers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindBurgers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindBurgers/Pods-FindBurgers.debug.xcconfig"; sourceTree = "<group>"; };
+		FBBE6E5D9C3A70E209FA868E /* Pods_FindBurgers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindBurgers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA6E137DEDBD943B9BC9A84 /* Pods_FindBurgers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754334D4FDD7FAC925010D30 /* Pods_FindBurgersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +148,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928B929D36BA08EF61D12076 /* Pods_FindBurgersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53072A9A21E5656600A3E214 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53072A9B21E5658A00A3E214 /* BaseCallback.swift */,
+				53072A9D21E565B200A3E214 /* CallbackEnum.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53072A9F21E565F100A3E214 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				53072AAA21E6825C00A3E214 /* Photos */,
+				53072AA921E6824F00A3E214 /* Venues */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		53072AA421E577E800A3E214 /* Injections */ = {
+			isa = PBXGroup;
+			children = (
+				53072AA521E577FB00A3E214 /* InjectionUseCase.swift */,
+				53072AA721E5784E00A3E214 /* InjectionApiDataSource.swift */,
+			);
+			path = Injections;
+			sourceTree = "<group>";
+		};
+		53072AA921E6824F00A3E214 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				53072AA021E5660000A3E214 /* VenueResponse.swift */,
+				53072AA221E573D200A3E214 /* BaseVenueResponse.swift */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		53072AAA21E6825C00A3E214 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				53072AAB21E6827900A3E214 /* BasePhotoResponse.swift */,
+				53072AAE21E6829D00A3E214 /* PhotoResponse.swift */,
+				53072AC421ED562500A3E214 /* BurgerPhotoResponse.swift */,
+				53072AC621ED5C3800A3E214 /* BurgerPhotoRequest.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		53072AB021E6874100A3E214 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				53072AB121E6875800A3E214 /* VenueDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		53072ABC21EBA1EA00A3E214 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				53072ABA21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift */,
+				53072AC021EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		53072ABD21EBA40600A3E214 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53072ABE21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		538EA09021E2B78F001237B1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +234,8 @@
 				538EA0B021E2B791001237B1 /* FindBurgersTests */,
 				538EA0BB21E2B791001237B1 /* FindBurgersUITests */,
 				538EA09A21E2B790001237B1 /* Products */,
+				7AD3503AF2854838F90E1EBF /* Pods */,
+				F04E41528495BF2F91D9945D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,8 +255,6 @@
 				538EA0CA21E2B7BD001237B1 /* Application */,
 				538EA0CB21E2B7D1001237B1 /* Database */,
 				538EA09C21E2B790001237B1 /* AppDelegate.swift */,
-				538EA09E21E2B790001237B1 /* ViewController.swift */,
-				538EA0A021E2B790001237B1 /* Main.storyboard */,
 				538EA0A321E2B791001237B1 /* Assets.xcassets */,
 				538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */,
 				538EA0A821E2B791001237B1 /* Info.plist */,
@@ -159,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				538EA0DE21E2BC4D001237B1 /* Modules */,
-				538EA0DF21E2BC5F001237B1 /* UseCases */,
+				538EA0F021E38F38001237B1 /* Common */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -167,6 +292,8 @@
 		538EA0CB21E2B7D1001237B1 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				53072A9F21E565F100A3E214 /* Responses */,
+				53072A9A21E5656600A3E214 /* Common */,
 				538EA0CE21E2B8E5001237B1 /* FoursquareApiDataSource */,
 				538EA0CF21E2B92B001237B1 /* ImageIdentificationApiDataSource */,
 			);
@@ -176,6 +303,9 @@
 		538EA0CC21E2B8C0001237B1 /* ShowAllBurgers */ = {
 			isa = PBXGroup;
 			children = (
+				53EA068821EEA237007AFC04 /* View1 */,
+				53072ABD21EBA40600A3E214 /* Extensions */,
+				53072AB021E6874100A3E214 /* Dto */,
 				538EA0D421E2B9A7001237B1 /* View */,
 				538EA0D021E2B995001237B1 /* ShowAllBurgersViewController.swift */,
 				538EA0D221E2B9A1001237B1 /* ShowAllBurgersPresenter.swift */,
@@ -216,6 +346,7 @@
 		538EA0D421E2B9A7001237B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53EA068D21EEA80F007AFC04 /* CollectionView */,
 				538EA0D521E2BBC0001237B1 /* ShowAllBurgersViewController.xib */,
 			);
 			path = View;
@@ -247,6 +378,84 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		538EA0F021E38F38001237B1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53072AA421E577E800A3E214 /* Injections */,
+				538EA0F421E424BD001237B1 /* Extensions */,
+				538EA0F121E38F49001237B1 /* Utils */,
+				538EA0DF21E2BC5F001237B1 /* UseCases */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		538EA0F121E38F49001237B1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				538EA0F221E38F56001237B1 /* ViewUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		538EA0F421E424BD001237B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				538EA0F521E424D3001237B1 /* UIImageExtension.swift */,
+				53072AB321EB978F00A3E214 /* UIImageViewExtension.swift */,
+				53072AB521EB9BD000A3E214 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53EA068821EEA237007AFC04 /* View1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View1;
+			sourceTree = "<group>";
+		};
+		53EA068D21EEA80F007AFC04 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				53072ABC21EBA1EA00A3E214 /* Cell */,
+				53EA069021EEA922007AFC04 /* Header */,
+				53EA068E21EEA81D007AFC04 /* BurgerCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		53EA069021EEA922007AFC04 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				53EA069121EEA92E007AFC04 /* HeaderView.swift */,
+				53EA069321EEA981007AFC04 /* HeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		7AD3503AF2854838F90E1EBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5B268B007657F1ED99596A9 /* Pods-FindBurgers.debug.xcconfig */,
+				59F968E9A6BC44D7C0E091B1 /* Pods-FindBurgers.release.xcconfig */,
+				28945F2B7907953EFDEA0FDA /* Pods-FindBurgersTests.debug.xcconfig */,
+				2FE868A53C7D2213FC7B6F8F /* Pods-FindBurgersTests.release.xcconfig */,
+				C33FD5E5C13B724ECEBD956B /* Pods-FindBurgersUITests.debug.xcconfig */,
+				8F093FB072362A6A9CB46F72 /* Pods-FindBurgersUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F04E41528495BF2F91D9945D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBBE6E5D9C3A70E209FA868E /* Pods_FindBurgers.framework */,
+				8B68C16496EA1513C98F3D17 /* Pods_FindBurgersTests.framework */,
+				C438F4897F642EEF3586D145 /* Pods_FindBurgersUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,9 +463,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 538EA0C121E2B791001237B1 /* Build configuration list for PBXNativeTarget "FindBurgers" */;
 			buildPhases = (
+				2BBF291910FB291AA9D34F2F /* [CP] Check Pods Manifest.lock */,
 				538EA09521E2B78F001237B1 /* Sources */,
 				538EA09621E2B78F001237B1 /* Frameworks */,
 				538EA09721E2B78F001237B1 /* Resources */,
+				EEC531CCF72FA6966B1E5D38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +482,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 538EA0C421E2B791001237B1 /* Build configuration list for PBXNativeTarget "FindBurgersTests" */;
 			buildPhases = (
+				C300C3622DC78DF36549FEFA /* [CP] Check Pods Manifest.lock */,
 				538EA0A921E2B791001237B1 /* Sources */,
 				538EA0AA21E2B791001237B1 /* Frameworks */,
 				538EA0AB21E2B791001237B1 /* Resources */,
@@ -289,6 +501,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 538EA0C721E2B791001237B1 /* Build configuration list for PBXNativeTarget "FindBurgersUITests" */;
 			buildPhases = (
+				53CEE42A6FB28BBDC7E24132 /* [CP] Check Pods Manifest.lock */,
 				538EA0B421E2B791001237B1 /* Sources */,
 				538EA0B521E2B791001237B1 /* Frameworks */,
 				538EA0B621E2B791001237B1 /* Resources */,
@@ -354,8 +567,9 @@
 				538EA0D621E2BBC0001237B1 /* ShowAllBurgersViewController.xib in Resources */,
 				538EA0A721E2B791001237B1 /* LaunchScreen.storyboard in Resources */,
 				538EA0A421E2B791001237B1 /* Assets.xcassets in Resources */,
+				53072AC121EBA48000A3E214 /* ShowBurgersCollectionViewCell.xib in Resources */,
 				538EA0DD21E2BC35001237B1 /* BurgerDetailsViewController.xib in Resources */,
-				538EA0A221E2B790001237B1 /* Main.storyboard in Resources */,
+				53EA069421EEA981007AFC04 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,23 +589,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BBF291910FB291AA9D34F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindBurgers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53CEE42A6FB28BBDC7E24132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindBurgersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C300C3622DC78DF36549FEFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindBurgersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC531CCF72FA6966B1E5D38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FindBurgers/Pods-FindBurgers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindBurgers/Pods-FindBurgers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		538EA09521E2B78F001237B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53072AB421EB978F00A3E214 /* UIImageViewExtension.swift in Sources */,
+				53072AA821E5784E00A3E214 /* InjectionApiDataSource.swift in Sources */,
 				538EA0E921E2BCDE001237B1 /* ImageIdentificationApiDataSourceImpl.swift in Sources */,
 				538EA0E121E2BC9B001237B1 /* GetBurger.swift in Sources */,
+				53072AA121E5660000A3E214 /* VenueResponse.swift in Sources */,
 				538EA0E721E2BCD3001237B1 /* ImageIdentificationApiDataSource.swift in Sources */,
+				53072AC721ED5C3800A3E214 /* BurgerPhotoRequest.swift in Sources */,
 				538EA0E521E2BCC3001237B1 /* FoursquareApiDataSourceImpl.swift in Sources */,
 				538EA0ED21E2BE3F001237B1 /* BurgerDetailsContract.swift in Sources */,
+				53072A9C21E5658A00A3E214 /* BaseCallback.swift in Sources */,
+				53072A9E21E565B200A3E214 /* CallbackEnum.swift in Sources */,
 				538EA0D821E2BBE3001237B1 /* BurgerDetailsPresenter.swift in Sources */,
 				538EA0E321E2BCB6001237B1 /* FoursquareApiDataSource.swift in Sources */,
 				538EA0D321E2B9A1001237B1 /* ShowAllBurgersPresenter.swift in Sources */,
+				538EA0F621E424D3001237B1 /* UIImageExtension.swift in Sources */,
+				53072AA321E573D200A3E214 /* BaseVenueResponse.swift in Sources */,
 				538EA0EF21E2C042001237B1 /* GetImage.swift in Sources */,
+				53072ABB21EBA1E400A3E214 /* ShowBurgersCollectionViewCell.swift in Sources */,
+				53072ABF21EBA43C00A3E214 /* ShowAllBurgersViewControllerMapViewExtension.swift in Sources */,
 				538EA0DA21E2BC00001237B1 /* BurgerDetailsViewController.swift in Sources */,
-				538EA09F21E2B790001237B1 /* ViewController.swift in Sources */,
+				53EA068F21EEA81D007AFC04 /* BurgerCollectionView.swift in Sources */,
+				538EA0F321E38F56001237B1 /* ViewUtils.swift in Sources */,
+				53072AC521ED562500A3E214 /* BurgerPhotoResponse.swift in Sources */,
+				53EA069221EEA92E007AFC04 /* HeaderView.swift in Sources */,
 				538EA0D121E2B995001237B1 /* ShowAllBurgersViewController.swift in Sources */,
+				53072AB221E6875800A3E214 /* VenueDto.swift in Sources */,
+				53072AAF21E6829D00A3E214 /* PhotoResponse.swift in Sources */,
+				53072AAC21E6827900A3E214 /* BasePhotoResponse.swift in Sources */,
+				53072AB621EB9BD000A3E214 /* UIViewExtension.swift in Sources */,
+				53072AA621E577FB00A3E214 /* InjectionUseCase.swift in Sources */,
 				538EA0EB21E2BD7C001237B1 /*  ShowAllBurgersContract.swift in Sources */,
 				538EA09D21E2B790001237B1 /* AppDelegate.swift in Sources */,
 			);
@@ -429,14 +740,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		538EA0A021E2B790001237B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				538EA0A121E2B790001237B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		538EA0A521E2B791001237B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -566,6 +869,7 @@
 		};
 		538EA0C221E2B791001237B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B268B007657F1ED99596A9 /* Pods-FindBurgers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +888,7 @@
 		};
 		538EA0C321E2B791001237B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F968E9A6BC44D7C0E091B1 /* Pods-FindBurgers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +907,7 @@
 		};
 		538EA0C521E2B791001237B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28945F2B7907953EFDEA0FDA /* Pods-FindBurgersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -623,6 +929,7 @@
 		};
 		538EA0C621E2B791001237B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FE868A53C7D2213FC7B6F8F /* Pods-FindBurgersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,6 +951,7 @@
 		};
 		538EA0C821E2B791001237B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33FD5E5C13B724ECEBD956B /* Pods-FindBurgersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -664,6 +972,7 @@
 		};
 		538EA0C921E2B791001237B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F093FB072362A6A9CB46F72 /* Pods-FindBurgersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GlB-9Y-KEv" customClass="ShowBurgersCollectionViewCell" customModule="FindBurgers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-dr-gCy">
+                        <rect key="frame" x="16" y="16" width="150" height="150"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SQ5-dr-gCy" firstAttribute="leading" secondItem="GlB-9Y-KEv" secondAttribute="leading" constant="16" id="8cZ-FQ-leG"/>
+                <constraint firstAttribute="trailing" secondItem="SQ5-dr-gCy" secondAttribute="trailing" constant="16" id="ViE-J7-RS6"/>
+                <constraint firstAttribute="bottom" secondItem="SQ5-dr-gCy" secondAttribute="bottom" constant="16" id="ZVX-jR-doB"/>
+                <constraint firstItem="SQ5-dr-gCy" firstAttribute="top" secondItem="GlB-9Y-KEv" secondAttribute="top" constant="16" id="pDn-za-ZAZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="v5D-ru-4a3"/>
+            <connections>
+                <outlet property="imageView" destination="SQ5-dr-gCy" id="11q-i6-WIC"/>
+            </connections>
+            <point key="canvasLocation" x="-235.19999999999999" y="77.361319340329842"/>
+        </collectionViewCell>
+    </objects>
+</document>

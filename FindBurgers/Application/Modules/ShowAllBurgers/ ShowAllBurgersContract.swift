@@ -9,10 +9,15 @@
 import Foundation
 
 protocol ShowAllBurgersPresenterContract {
-   
+    func findBurgersNear(latitude: Double, longitude: Double)
 }
 
 protocol  ShowAllBurgersViewContract {
- 
+    func showNear(venue: VenueDto)
+    func showBurgerDetails(title: String, photo: String)
+    func showError()
 }
 
+protocol ShowBurgersCollectionViewCellDelegate: class {
+    func showBurgerDetails(title: String, photo: String)
+}
