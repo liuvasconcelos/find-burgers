@@ -15,9 +15,16 @@ class HeaderView: UICollectionReusableView, CLLocationManagerDelegate {
     public static let NIB_NAME   = "HeaderView"
     public static let IDENTIFIER = "HeaderViewIdentifier"
     
-    var locationManager : CLLocationManager!
-    var currentLocationDidNotSet = true
+    var mapDelegate: HeaderMapDelegate?
 
     @IBOutlet weak var map: MKMapView!
     
+    func configureView() {
+        mapDelegate?.setupMap(map: self.map)
+    }
+    
+}
+
+protocol HeaderMapDelegate: class {
+    func setupMap(map: MKMapView)
 }

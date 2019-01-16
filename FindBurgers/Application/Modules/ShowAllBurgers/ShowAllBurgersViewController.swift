@@ -10,18 +10,16 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract, CLLocationManagerDelegate {
+class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract, CLLocationManagerDelegate, HeaderMapDelegate {
    
     public static let NIB_NAME = "ShowAllBurgersViewController"
     
-//    @IBOutlet weak var map: MKMapView!
-    
     @IBOutlet weak var photosCollectionView: BurgerCollectionView!
-    @IBOutlet weak var mainScrollView: UIScrollView!
     
     var locationManager : CLLocationManager!
     var nearVenues: [VenueDto] = []
     var venuesOrder = 0
+    var map: MKMapView?
     
     var currentLocationDidNotSet = true
     
@@ -41,12 +39,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager                 = CLLocationManager()
-        locationManager.delegate        = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.requestWhenInUseAuthorization()
-        
-//        map.delegate = self
+        photosCollectionView.set(headerDelegate: self)
         
         photosCollectionView.viewContract = self
         self.view.addGradient()
@@ -55,6 +48,16 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tartuBusStationLocation = CLLocation(latitude: self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
+    }
+    
+    func setupMap(map: MKMapView) {
+        self.map = map
+        locationManager                 = CLLocationManager()
+        locationManager.delegate        = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.requestWhenInUseAuthorization()
+        
+        map.delegate = self
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -68,7 +71,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
             if let location = locations.first {
                 let span       = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region     = MKCoordinateRegion(center: location.coordinate, span: span)
-//                map.setRegion(region, animated: false)
+                map!.setRegion(region, animated: false)
 
                 presenter.findBurgersNear(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 currentLocationDidNotSet = false
@@ -76,7 +79,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
                 //CHANGE TO ESTONIA METRO COORDINATES 58.3780, 26.7321
                 let coordinate = CLLocationCoordinate2D(latitude:  self.tartuBusStationLatitude, longitude: self.tartuBusStatiusLongitude)
                 let circleOverlay: MKCircle = MKCircle(center: coordinate, radius: 1000)
-//                map.addOverlay(circleOverlay)
+                map!.addOverlay(circleOverlay)
             }
         }
         
@@ -86,7 +89,7 @@ class ShowAllBurgersViewController: UIViewController, ShowAllBurgersViewContract
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = title
-//        map.addAnnotation(annotation)
+        map!.addAnnotation(annotation)
     }
     
     func showNear(venue: VenueDto) {

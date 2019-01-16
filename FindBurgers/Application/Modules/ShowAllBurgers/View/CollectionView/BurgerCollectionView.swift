@@ -13,6 +13,8 @@ class BurgerCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
     var burgers = [VenueDto]()
     var viewContract: ShowAllBurgersViewContract?
     
+    var mapDelegate: HeaderMapDelegate?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -52,6 +54,10 @@ class BurgerCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         self.reloadData()
     }
     
+    func set(headerDelegate: HeaderMapDelegate) {
+        self.mapDelegate = headerDelegate
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: CGFloat(155), height: CGFloat(155))
     }
@@ -72,6 +78,8 @@ class BurgerCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         let headerView = self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                withReuseIdentifier: HeaderView.IDENTIFIER,
                                                                for: indexPath) as! HeaderView
+        headerView.mapDelegate = self.mapDelegate
+        headerView.configureView()
         
         return headerView
     }
